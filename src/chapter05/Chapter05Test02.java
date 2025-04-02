@@ -17,15 +17,22 @@ public class Chapter05Test02 extends CodingTest {
         testCases.add(() -> createCase(arr2));
     }
 
+    /*
+        전체 흐름에서 가장 느린(=복잡도가 높은) 연산이 전체 시간 복잡도를 결정함
+        - Big-O 표기법은 정확한 시간 측정이 아니라, "입력 크기 N이 커질 때 알고리즘이 얼마나 빨리 느려지는가"를 나타내는 개념적 도구
+        - 모든 연산의 시간 복잡도 중 가장 큰 것을 전체 복잡도로 봄
+
+        => 아래에선 O(n log n)이 가장 크므로 시간 복잡도는 O(n log n)
+    */
     private void createCase(int[] arr) {
 
         // Stream -> 참조타입에서만 사용 가능
         // Stream<Integer> -> 이런 식으로 제네릭을 응용하는 클래스 => 제네릭은 원시 타입을 대상으로는 사용할 수 없기 때문에 Boxing 필요
         // int[]는 IntStream이 별도로 존재하긴 함
-        Integer[] distinct = Arrays.stream(arr)
-                .boxed()                            // 기본형을 Boxing (int -> Integer)
-                .distinct()                         // Stream의 메소드 -> Stream<Integer>에서 중복 제거
-                .toArray(Integer[]::new);           // toArray() 만 쓰면 => Object[] 타입이 되버림 => 따라서 타입 힌트 필요
+        Integer[] distinct = Arrays.stream(arr)     // O(1)
+                .boxed()                            // O(n) // 기본형을 Boxing (int -> Integer)
+                .distinct()                         // O(N) // Stream의 메소드 -> Stream<Integer>에서 중복 제거
+                .toArray(Integer[]::new);           // O(N) // toArray() 만 쓰면 => Object[] 타입이 되버림 => 따라서 타입 힌트 필요
 
         /*
         - toArray(Integer[]::new) == toArray(size -> new Integer[size])
@@ -56,7 +63,8 @@ public class Chapter05Test02 extends CodingTest {
         */
 
         // Comparator.reverseOrder()를 써도 됨 -> 여기서 내부적으로 Collections.reverseOrder()를 호출하기 때문
-        Arrays.sort(distinct, Collections.reverseOrder());
+        // O(n log n)
+        Arrays.sort(distinct, Collections.reverseOrder());      // O(n log n)
 
         /*
         - mapToInt
@@ -72,9 +80,9 @@ public class Chapter05Test02 extends CodingTest {
         - IntStream의 .toArray()의 기본 return type => int[]
             - IntStream은 매개변수를 받지 않음
         */
-        int[] result = Arrays.stream(distinct)      // Integer[] -> Stream<Integer>
-                .mapToInt(Integer::intValue)        // unboxing 실행
-                .toArray();
+        int[] result = Arrays.stream(distinct)      // O(1) // Integer[] -> Stream<Integer>
+                .mapToInt(Integer::intValue)        // O(N) // unboxing 실행
+                .toArray();                         // O(N)
 
         System.out.println("[정렬 결과] : " + Arrays.toString(result));
     }
