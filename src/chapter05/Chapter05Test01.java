@@ -5,7 +5,7 @@ import model.CodingTest;
 import java.util.Arrays;
 
 // 문제 01. 배열 정렬하기
-public class Test01 extends CodingTest {
+public class Chapter05Test01 extends CodingTest {
 
     private static final int[] arr1 = {1, -5, 2, 4, 3};
     private static final int[] arr2 = {2, 1, 1, 3, 2, 5, 4};
