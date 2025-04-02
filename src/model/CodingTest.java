@@ -7,7 +7,7 @@ public abstract class CodingTest {
 
     protected List<Runnable> testCases = new ArrayList<>(); // 테스트 케이스
     private Long limitMillis; // 제한시간
-    private int errorCount = 0; // 위배 케이스 수
+    private int errorCases = 0; // 위배 케이스 수
 
 
     /* 생성자 */
@@ -22,8 +22,8 @@ public abstract class CodingTest {
         executeCases();
 
         System.out.println("====================[결과]====================");
-        if (errorCount > 0) {
-            System.out.println("위배된 Case 수 : " + errorCount);
+        if (errorCases > 0) {
+            System.out.println("위배된 Case 수 : " + errorCases);
         } else {
             System.out.println("Success");
         }
@@ -53,7 +53,7 @@ public abstract class CodingTest {
         printedExecuteTime(executionTime);
 
         if (limitMillis != null && executionTime > limitMillis) {
-            errorCount++;
+            errorCases++;
             System.out.printf("[Error] 제한 시간 초과: %dms (제한: %dms)%n", executionTime, limitMillis);
         }
 
