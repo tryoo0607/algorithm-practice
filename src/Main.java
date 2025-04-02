@@ -9,8 +9,8 @@ public class Main {
         */
 
 //        CodingTest test = new Chapter05Test01();
-        CodingTest test = new Chapter05Test02();
-
+//        CodingTest test = new Chapter05Test02();
+        CodingTest test = new Chapter05Test03();
 
 
         // 고정
