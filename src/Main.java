@@ -4,7 +4,14 @@ import model.*;
 public class Main {
     public static void main(String[] args) {
 
-        CodingTest test = new Chapter05Test01();
+        /*
+                Chapter 05
+        */
+
+//        CodingTest test = new Chapter05Test01();
+        CodingTest test = new Chapter05Test02();
+
+
 
         // 고정
         test.run();
