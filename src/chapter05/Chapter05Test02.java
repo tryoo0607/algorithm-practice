@@ -83,6 +83,7 @@ public class Chapter05Test02 extends CodingTest {
                 .mapToInt(Integer::intValue)        // O(N) // unboxing 실행
                 .toArray();                         // O(N)
 
-        System.out.println("[정렬 결과] : " + Arrays.toString(result));
+        System.out.println("[작업 이전] : " + Arrays.toString(arr));
+        System.out.println("[작업 결과] : " + Arrays.toString(result));
     }
 }

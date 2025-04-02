@@ -22,6 +22,7 @@ public class Chapter05Test01 extends CodingTest {
         int[] clone = arr.clone();
         Arrays.sort(clone);
 
-        System.out.println("[정렬 결과] : " + Arrays.toString(clone));
+        System.out.println("[작업 이전] : " + Arrays.toString(arr));
+        System.out.println("[작업 결과] : " + Arrays.toString(clone));
     }
 }
