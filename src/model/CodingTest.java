@@ -17,17 +17,18 @@ public abstract class CodingTest {
         this.limitMillis = limitMillis;
     }
 
+    /* 실행 */
     public void run() {
         addCases();
         executeCases();
 
-        System.out.println("====================[결과]====================");
+        System.out.println("==========================[결과]==========================");
         if (errorCases > 0) {
             System.out.println("위배된 Case 수 : " + errorCases);
         } else {
             System.out.println("Success");
         }
-        System.out.println("=============================================");
+        System.out.println("=========================================================");
     }
 
 
@@ -54,7 +55,7 @@ public abstract class CodingTest {
 
         if (limitMillis != null && executionTime > limitMillis) {
             errorCases++;
-            System.out.printf("[Error] 제한 시간 초과: %dms (제한: %dms)%n", executionTime, limitMillis);
+            System.out.printf("[Error] 제한 시간 초과 : %dms (제한: %dms)%n", executionTime, limitMillis);
         }
 
         System.out.println("-------------------------------------------------");
@@ -65,6 +66,6 @@ public abstract class CodingTest {
         long seconds = (millis / 1000) % 60;
         long remainMillis = millis % 1000;
 
-        System.out.printf("실행 시간: %d분 %d초 %d밀리초%n", minutes, seconds, remainMillis);
+        System.out.printf("[실행 시간] : %d분 %d초 %d밀리초%n", minutes, seconds, remainMillis);
     }
 }
