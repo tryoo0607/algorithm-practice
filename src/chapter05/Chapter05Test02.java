@@ -29,7 +29,7 @@ public class Chapter05Test02 extends CodingTest {
         // Stream -> 참조타입에서만 사용 가능
         // Stream<Integer> -> 이런 식으로 제네릭을 응용하는 클래스 => 제네릭은 원시 타입을 대상으로는 사용할 수 없기 때문에 Boxing 필요
         // int[]는 IntStream이 별도로 존재하긴 함
-        Integer[] distinct = Arrays.stream(arr)     // O(1)
+        Integer[] distinct = Arrays.stream(arr)     // O(N)
                 .boxed()                            // O(n) // 기본형을 Boxing (int -> Integer)
                 .distinct()                         // O(N) // Stream의 메소드 -> Stream<Integer>에서 중복 제거
                 .toArray(Integer[]::new);           // O(N) // toArray() 만 쓰면 => Object[] 타입이 되버림 => 따라서 타입 힌트 필요
@@ -79,7 +79,7 @@ public class Chapter05Test02 extends CodingTest {
         - IntStream의 .toArray()의 기본 return type => int[]
             - IntStream은 매개변수를 받지 않음
         */
-        int[] result = Arrays.stream(distinct)      // O(1) // Integer[] -> Stream<Integer>
+        int[] result = Arrays.stream(distinct)      // O(N) // Integer[] -> Stream<Integer>
                 .mapToInt(Integer::intValue)        // O(N) // unboxing 실행
                 .toArray();                         // O(N)
 
