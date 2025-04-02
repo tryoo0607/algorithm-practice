@@ -62,8 +62,7 @@ public class Chapter05Test02 extends CodingTest {
                 - 내림차순 Comparator 반환
         */
 
-        // Comparator.reverseOrder()를 써도 됨 -> 여기서 내부적으로 Collections.reverseOrder()를 호출하기 때문
-        // O(n log n)
+        // 대신 Comparator.reverseOrder()를 써도 됨 -> 여기서 내부적으로 Collections.reverseOrder()를 호출하기 때문
         Arrays.sort(distinct, Collections.reverseOrder());      // O(n log n)
 
         /*
