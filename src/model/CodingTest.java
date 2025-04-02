@@ -6,9 +6,7 @@ import java.util.List;
 public abstract class CodingTest {
 
     protected List<Runnable> testCases = new ArrayList<>(); // 테스트 케이스
-
     private Long limitMillis; // 제한시간
-
     private int errorCount = 0; // 위배 케이스 수
 
 
@@ -21,7 +19,7 @@ public abstract class CodingTest {
 
     public void run() {
         addCases();
-        executeTest();
+        executeCases();
 
         System.out.println("====================[결과]====================");
         if (errorCount > 0) {
@@ -36,7 +34,7 @@ public abstract class CodingTest {
     /* Case */
     public abstract void addCases();
 
-    private void executeTest() {
+    private void executeCases() {
         for (int i = 0; i < testCases.size(); i++) {
             solve(testCases.get(i), i + 1);  // 케이스 번호는 1부터 시작
         }
@@ -44,13 +42,14 @@ public abstract class CodingTest {
 
     private void solve(Runnable testCase, int index) {
         System.out.printf("------------------[Test Case %d]------------------%n", index);
+
         long start = System.currentTimeMillis();
 
         testCase.run();
 
         long end = System.currentTimeMillis();
-        long executionTime = end - start;
 
+        long executionTime = end - start;
         printedExecuteTime(executionTime);
 
         if (limitMillis != null && executionTime > limitMillis) {
