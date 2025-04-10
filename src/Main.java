@@ -11,7 +11,8 @@ public class Main {
 //        CodingTest test = new Chapter05Test01();
 //        CodingTest test = new Chapter05Test02();
 //        CodingTest test = new Chapter05Test03();
-        CodingTest test = new Chapter05Test04();
+//        CodingTest test = new Chapter05Test04();
+        CodingTest test = new Chapter05Test05();
 
 
         // 고정
