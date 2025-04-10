@@ -16,6 +16,10 @@ public class Chapter05Test04 extends CodingTest {
         testCases.add(() -> createCase(answers2));
     }
 
+
+    /*
+        시간 복잡도 : O(N)
+    */
     private void createCase(int[] answers) {
         int[][] patterns = {
                 {1, 2, 3, 4, 5},
@@ -59,6 +63,7 @@ public class Chapter05Test04 extends CodingTest {
             }
         }
 
+        // 시간 복잡도 : O(1)
         int[] results = targets.stream()        // O(1)
                 .sorted()                       // O(1) => 만약 patterns의 길이를 K로 가정하면 O(K log K)
                 .mapToInt(Integer::intValue)    // O(1)
