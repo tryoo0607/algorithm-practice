@@ -48,7 +48,7 @@ public class Chapter05Test05 extends CodingTest {
     /*
       시간 복잡도 : O(N^3)
     */
-    public void createCase(Map<String, int[][]> arrayMap) {
+    private void createCase(Map<String, int[][]> arrayMap) {
 
         int[][] arr1 = arrayMap.get(ARR1);
         int[][] arr2 = arrayMap.get(ARR2);

@@ -13,12 +13,12 @@ public class Chapter05Test01 extends CodingTest {
 
     @Override
     public void addCases() {
-        testCases.add(() -> sortArr(ARR1));
-        testCases.add(() -> sortArr(ARR2));
-        testCases.add(() -> sortArr(ARR3));
+        testCases.add(() -> createCase(ARR1));
+        testCases.add(() -> createCase(ARR2));
+        testCases.add(() -> createCase(ARR3));
     }
 
-    private void sortArr(int[] arr) {
+    private void createCase(int[] arr) {
         int[] clone = arr.clone();
         Arrays.sort(clone);
 
