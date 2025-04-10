@@ -60,6 +60,17 @@ public class Chapter05Test05 extends CodingTest {
 
         int[][] results = new int[r1][c2];
 
+        /*
+          - 행렬 A의 크기: r1 x c1
+          - 행렬 B의 크기: r2 x c2
+          - 곱셈 조건: c1 == r2 이어야 함 (A의 열 수 == B의 행 수)
+          - 결과 행렬의 크기: r1 x c2
+
+          곱셈 방식:
+            result[i][j] = A의 i행과 B의 j열의 내적
+                         = A[i][0] * B[0][j] + A[i][1] * B[1][j] + ... + A[i][c1-1] * B[c1-1][j]
+        */
+
         // O(N^3)
         for(int i = 0; i < r1; i++) {                           // O(N)
             for(int j=0; j < c2; j++) {                         // O(N)
