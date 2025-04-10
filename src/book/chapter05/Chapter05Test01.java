@@ -1,4 +1,4 @@
-package chapter05;
+package book.chapter05;
 
 import model.CodingTest;
 
