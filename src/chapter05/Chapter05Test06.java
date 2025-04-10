@@ -68,7 +68,10 @@ public class Chapter05Test06 extends CodingTest {
     }
 
     // 개선 후 코드
-    // O(M + N log N)
+
+    /*
+      시간 복잡도 : O(M + N log N)
+    */
     private void createCase(int totalStage, int[] stages) {
 
         // totalStage가 5이면 stages는 최대 6까지 출력 가능 (+1)
