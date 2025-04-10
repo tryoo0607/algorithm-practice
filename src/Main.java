@@ -13,8 +13,8 @@ public class Main {
 //        CodingTest test = new Chapter05Test03();
 //        CodingTest test = new Chapter05Test04();
 //        CodingTest test = new Chapter05Test05();
-        CodingTest test = new Chapter05Test06();
-
+//        CodingTest test = new Chapter05Test06();
+        CodingTest test = new Chapter05Test07();
 
         // 고정
         test.run();
