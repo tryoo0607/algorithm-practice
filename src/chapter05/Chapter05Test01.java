@@ -7,15 +7,15 @@ import java.util.Arrays;
 // 문제 01. 배열 정렬하기
 public class Chapter05Test01 extends CodingTest {
 
-    private final int[] arr1 = {1, -5, 2, 4, 3};
-    private final int[] arr2 = {2, 1, 1, 3, 2, 5, 4};
-    private final int[] arr3 = {6, 1, 7};
+    private final int[] ARR1 = {1, -5, 2, 4, 3};
+    private final int[] ARR2 = {2, 1, 1, 3, 2, 5, 4};
+    private final int[] ARR3 = {6, 1, 7};
 
     @Override
     public void addCases() {
-        testCases.add(() -> sortArr(arr1));
-        testCases.add(() -> sortArr(arr2));
-        testCases.add(() -> sortArr(arr3));
+        testCases.add(() -> sortArr(ARR1));
+        testCases.add(() -> sortArr(ARR2));
+        testCases.add(() -> sortArr(ARR3));
     }
 
     private void sortArr(int[] arr) {

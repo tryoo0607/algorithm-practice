@@ -8,13 +8,13 @@ import java.util.Collections;
 // 문제 02. 배열 제어하기
 public class Chapter05Test02 extends CodingTest {
 
-    private final int[] arr1 = {4, 2, 2, 1, 3, 4};
-    private final int[] arr2 = {2, 1, 1, 3, 2, 5, 4};
+    private final int[] ARR1 = {4, 2, 2, 1, 3, 4};
+    private final int[] ARR2 = {2, 1, 1, 3, 2, 5, 4};
 
     @Override
     public void addCases() {
-        testCases.add(() -> createCase(arr1));
-        testCases.add(() -> createCase(arr2));
+        testCases.add(() -> createCase(ARR1));
+        testCases.add(() -> createCase(ARR2));
     }
 
     /*

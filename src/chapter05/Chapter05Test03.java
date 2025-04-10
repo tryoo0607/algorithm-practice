@@ -8,13 +8,13 @@ import java.util.HashSet;
 // 문제 03. 두 개 뽑아서 더하기
 public class Chapter05Test03 extends CodingTest {
 
-    private final int[] numbers1 = {2, 1, 3, 4, 1};
-    private final int[] numbers2 = {5, 0, 2, 7};
+    private final int[] NUMBERS1 = {2, 1, 3, 4, 1};
+    private final int[] NUMBERS2 = {5, 0, 2, 7};
 
     @Override
     public void addCases() {
-        testCases.add(() -> createCase(numbers1));
-        testCases.add(() -> createCase(numbers2));
+        testCases.add(() -> createCase(NUMBERS1));
+        testCases.add(() -> createCase(NUMBERS2));
     }
 
     /*

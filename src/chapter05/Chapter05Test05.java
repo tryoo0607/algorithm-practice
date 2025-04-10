@@ -13,7 +13,7 @@ public class Chapter05Test05 extends CodingTest {
     private final String ARR1 = "arr1";
     private final String ARR2 = "arr2";
 
-    Map<String, int[][]> arrays1 = new HashMap<>() {{
+    Map<String, int[][]> ARRAYS1 = new HashMap<>() {{
         put(ARR1, new int[][]{
                 {1, 4},
                 {3, 2},
@@ -25,7 +25,7 @@ public class Chapter05Test05 extends CodingTest {
         });
     }};
 
-    Map<String, int[][]> arrays2 = new HashMap<>() {{
+    Map<String, int[][]> ARRAYS2 = new HashMap<>() {{
         put(ARR1, new int[][]{
                 {2, 3, 2},
                 {4, 2, 4},
@@ -41,8 +41,8 @@ public class Chapter05Test05 extends CodingTest {
     @Override
     public void addCases() {
 
-        testCases.add(() -> createCase(arrays1));
-        testCases.add(() -> createCase(arrays2));
+        testCases.add(() -> createCase(ARRAYS1));
+        testCases.add(() -> createCase(ARRAYS2));
     }
 
     /*
