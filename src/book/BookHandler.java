@@ -1,6 +1,7 @@
 package book;
 
-import book.chapter06.Chapter06Test08;
+import book.chapter05.*;
+import book.chapter06.*;
 import common.CodingTest;
 import common.CodingTestHandler;
 
