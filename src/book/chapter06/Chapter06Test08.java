@@ -26,8 +26,6 @@ public class Chapter06Test08 extends CodingTest {
     private void createCase(String str) {
 
         Stack<Character> stack = new Stack<>();
-        int startCount = 0;
-        int endCount = 0;
 
         boolean result = true;
 
