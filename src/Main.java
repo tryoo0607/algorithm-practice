@@ -5,17 +5,17 @@ import common.*;
 public class Main {
     public static void main(String[] args) {
 
-        CodingTest test = getCodingTest(TestType.BOOK);
+        CodingTest test = getCodingTestWithType(TestType.BOOK);
 
         // 고정
         test.run();
     }
 
-    private static CodingTest getCodingTest(TestType testType) {
+    private static CodingTest getCodingTestWithType(TestType type) {
 
         CodingTestHandler handler;
 
-        switch(testType) {
+        switch(type) {
             case BOOK -> handler = new BookHandler();
             case BAEKJOON -> handler = new BaekjoonHandler();
             default -> handler = new DefaultHandler();
