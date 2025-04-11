@@ -1,27 +1,26 @@
-import book.chapter06.Chapter06Test08;
-import model.*;
+import baekjoon.BaekjoonHandler;
+import book.BookHandler;
+import common.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        /*
-            Chapter 05
-        */
-
-//        CodingTest test = new Chapter05Test01();
-//        CodingTest test = new Chapter05Test02();
-//        CodingTest test = new Chapter05Test03();
-//        CodingTest test = new Chapter05Test04();
-//        CodingTest test = new Chapter05Test05();
-//        CodingTest test = new Chapter05Test06();
-//        CodingTest test = new Chapter05Test07();
-
-        /*
-            Chapter 06
-        */
-        CodingTest test = new Chapter06Test08();
+        CodingTest test = getCodingTest(TestType.BOOK);
 
         // 고정
         test.run();
+    }
+
+    private static CodingTest getCodingTest(TestType testType) {
+
+        CodingTestHandler handler;
+
+        switch(testType) {
+            case BOOK -> handler = new BookHandler();
+            case BAEKJOON -> handler = new BaekjoonHandler();
+            default -> handler = new DefaultHandler();
+        }
+
+        return handler.getTest();
     }
 }

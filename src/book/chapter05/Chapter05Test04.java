@@ -1,6 +1,6 @@
 package book.chapter05;
 
-import model.CodingTest;
+import common.CodingTest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
