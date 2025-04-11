@@ -4,7 +4,7 @@ import common.CodingTest;
 
 import java.util.*;
 
-// 문제 06. 실패율
+// 문제 06. 실패율 **
 public class Chapter05Test06 extends CodingTest {
 
     private final int N1 = 5;

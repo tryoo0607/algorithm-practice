@@ -9,21 +9,21 @@ public class BookHandler extends CodingTestHandler {
 
     @Override
     public CodingTest getTest() {
-                /*
+        /*
             Chapter 05
         */
+//        return new Chapter05Test01();     // 문제 01. 배열 정렬하기 *
+//        return new Chapter05Test02();     // 문제 02. 배열 제어하기 **
+//        return new Chapter05Test03();     // 문제 03. 두 개 뽑아서 더하기 *
+//        return new Chapter05Test04();     // 문제 04. 모의고사 *
+//        return new Chapter05Test05();     // 문제 05. 행렬의 곱셈 *
+//        return new Chapter05Test06();     // 문제 06. 실패율 **
+//        return new Chapter05Test07();     // 문제 07. 방문 길이 **
 
-//        return new Chapter05Test01();
-//        return new Chapter05Test02();
-//        return new Chapter05Test03();
-//        return new Chapter05Test04();
-//        return new Chapter05Test05();
-//        return new Chapter05Test06();
-//        return new Chapter05Test07();
 
         /*
             Chapter 06
         */
-        return new Chapter06Test08();
+        return new Chapter06Test08();       // 문제 08. 올바른 괄호 **
     }
 }

@@ -4,7 +4,7 @@ import common.CodingTest;
 
 import java.util.*;
 
-// 방문 길이
+// 문제 07. 방문 길이 **
 public class Chapter05Test07 extends CodingTest {
 
     private final String DIRS1 = "ULURRDLLU";

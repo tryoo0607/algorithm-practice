@@ -5,7 +5,7 @@ import common.CodingTest;
 import java.util.Arrays;
 import java.util.Collections;
 
-// 문제 02. 배열 제어하기
+// 문제 02. 배열 제어하기 **
 public class Chapter05Test02 extends CodingTest {
 
     private final int[] ARR1 = {4, 2, 2, 1, 3, 4};

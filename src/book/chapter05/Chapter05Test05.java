@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-// 문제 05. 행렬의 곱셈
+// 문제 05. 행렬의 곱셈 *
 public class Chapter05Test05 extends CodingTest {
 
     private final String ARR1 = "arr1";

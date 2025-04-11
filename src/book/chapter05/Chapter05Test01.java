@@ -4,7 +4,7 @@ import common.CodingTest;
 
 import java.util.Arrays;
 
-// 문제 01. 배열 정렬하기
+// 문제 01. 배열 정렬하기 *
 public class Chapter05Test01 extends CodingTest {
 
     private final int[] ARR1 = {1, -5, 2, 4, 3};

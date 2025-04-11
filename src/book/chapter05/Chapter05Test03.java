@@ -5,7 +5,7 @@ import common.CodingTest;
 import java.util.Arrays;
 import java.util.HashSet;
 
-// 문제 03. 두 개 뽑아서 더하기
+// 문제 03. 두 개 뽑아서 더하기 *
 public class Chapter05Test03 extends CodingTest {
 
     private final int[] NUMBERS1 = {2, 1, 3, 4, 1};
