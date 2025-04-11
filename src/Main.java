@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         CodingTest test = getCodingTestWithType(TestType.BOOK);
+//        CodingTest test = getCodingTestWithType(TestType.BAEKJOON);
 
-        // 고정
         test.run();
     }
 
