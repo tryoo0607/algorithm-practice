@@ -25,6 +25,7 @@ public class BookHandler extends CodingTestHandler {
             Chapter 06
         */
 //        return new Chapter06Test08();       // 문제 08. 올바른 괄호 **
-        return new Chapter06Test09();       // 문제 09. 10진수를 2진수로 변환하기 *
+//        return new Chapter06Test09();       // 문제 09. 10진수를 2진수로 변환하기 *
+        return new Chapter06Test10();       // 문제 10. 괄호 회전하기 *     => 복습 필수 (다시 풀어볼 것)
     }
 }
