@@ -47,6 +47,7 @@ public class Chapter05Test05 extends CodingTest {
 
     /*
       시간 복잡도 : O(N^3)
+      공간 복잡도 : O(N^2)
     */
     private void createCase(Map<String, int[][]> arrayMap) {
 
@@ -58,7 +59,7 @@ public class Chapter05Test05 extends CodingTest {
         int r2 = arr2.length;
         int c2 = arr2[0].length;    // B 열의 수
 
-        int[][] results = new int[r1][c2];  // 결과 행렬: r1 x c2
+        int[][] results = new int[r1][c2];  // 결과 행렬: r1 x c2 // 공간 복잡도 : O(r1 × c2) => O(N^2)
 
         /*
           - 행렬 A의 크기: r1 x c1

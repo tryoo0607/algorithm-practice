@@ -4,7 +4,6 @@ import common.CodingTest;
 
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Stack;
 
 // 문제 13. 크레인 인형 뽑기 게임 **
@@ -27,36 +26,38 @@ public class Chapter06Test13 extends CodingTest {
     }
 
     /*
-        시간 복잡도 : O(N^2 + M)
-    */
+    시간 복잡도 : O(N^2 + M)
+    공간 복잡도 : O(N^2 + M)
+*/
     private void createCase(int[][] board, int[] moves) {
 
-        HashMap<Integer, Stack<Integer>> boardMap = new HashMap<>();
+        HashMap<Integer, Stack<Integer>> boardMap = new HashMap<>();  // 공간: O(N) (key 수 만큼)
 
-        for(int i = 0; i < 5; i++) {                            // O(N)
-            Stack<Integer> boardStack = new Stack<>();
-            for(int j = 4; j >= 0; j--) {                       // O(N)
-                int target = board[j][i];                       // O(1)
+        for(int i = 0; i < 5; i++) {                                   // O(N)
+            Stack<Integer> boardStack = new Stack<>();                 // 최대 O(N) 공간 사용 (행별 stack)
+            for(int j = 4; j >= 0; j--) {                              // O(N)
+                int target = board[j][i];                              // O(1)
                 if(target != 0) {
-                    boardStack.push(target);                    // O(1)
+                    boardStack.push(target);                           // O(1)
                 }
             }
-            boardMap.put(i + 1, boardStack);                    // O(1)
+            boardMap.put(i + 1, boardStack);                           // 총 N개의 Stack → 공간 O(N^2)
         }
 
-        Stack<Integer> catchStack = new Stack<>();
+        Stack<Integer> catchStack = new Stack<>();                     // 공간: O(M) (최악 시 M개 쌓임)
         int result = 0;
-        for (int move : moves) {                                // O(M)
-            Stack<Integer> targetRow = boardMap.get(move);      // O(1)
+
+        for (int move : moves) {                                       // O(M)
+            Stack<Integer> targetRow = boardMap.get(move);             // O(1)
 
             if (!targetRow.isEmpty()) {
-                int catchItem = targetRow.pop();                // O(1)
+                int catchItem = targetRow.pop();                       // O(1)
 
                 if (!catchStack.isEmpty() && catchStack.peek().equals(catchItem)) {
-                    catchStack.pop();                           // O(1)
-                    result+=2;                                  // O(1)
+                    catchStack.pop();                                  // O(1)
+                    result += 2;                                       // O(1)
                 } else {
-                    catchStack.push(catchItem);                 // O(1)
+                    catchStack.push(catchItem);                        // O(1)
                 }
             }
         }

@@ -91,14 +91,15 @@ public class Chapter05Test07 extends CodingTest {
 
     /*
       시간 복잡도 : O(N)
+      공간 복잡도 : O(N)
     */
     private void createCase(String dirs) {
         int x = 0;
         int y = 0;
 
-        Set<String> paths = new HashSet<>();
+        Set<String> paths = new HashSet<>();        // O(N)
 
-        char[] charArr = dirs.toCharArray();        // O(N)
+        char[] charArr = dirs.toCharArray();        // O(N), 공간 복잡도: O(N)
 
         for(char dir : charArr) {                   // O(N)
             int[] offset = getLocation(dir);        // O(1)

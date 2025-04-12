@@ -71,12 +71,13 @@ public class Chapter05Test06 extends CodingTest {
 
     /*
       시간 복잡도 : O(M + N log N)
+      공간 복잡도 : O(N)
     */
     private void createCase(int totalStage, int[] stages) {
 
         // totalStage가 5이면 stages는 최대 6까지 출력 가능 (+1)
         // 배열의 index는 0부터 시작하지만 stages는 1부터 시작 (+1)
-        int[] challengers = new int[totalStage + 2];            // O(1)
+        int[] challengers = new int[totalStage + 2];            // O(1), 공간 복잡도 : O(N)
 
         /*
             총 stage 수 : N
@@ -89,7 +90,7 @@ public class Chapter05Test06 extends CodingTest {
         }
 
         int users = stages.length;
-        Map<Integer, Double> rateMap = new HashMap<>();
+        Map<Integer, Double> rateMap = new HashMap<>();             // 공간 복잡도: O(N)
 
         for(int i = 1; i <= totalStage; i++) {                      // O(N)
             if(challengers[i] == 0) {                               // O(1)

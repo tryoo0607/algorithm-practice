@@ -60,9 +60,10 @@ public class Chapter06Test10 extends CodingTest {
 
     /*
         시간 복잡도 : O(N^2)
+        공간 복잡도 : O(N)
     */
     private void createCase(String str) {
-        HashMap<Character, Character> map = new HashMap<>();
+        HashMap<Character, Character> map = new HashMap<>();                        // 공간복잡도 : O(1)
         map.put(')', '(');
         map.put('}', '{');
         map.put(']', '[');
@@ -75,7 +76,7 @@ public class Chapter06Test10 extends CodingTest {
         A: for(int i=0; i < n; i++) {                                                // O(N) // 회전 횟수: n번 반복
 
             // 여는 괄호를 담기 위한 Deque (유효한, 한쌍이 될만한 괄호를 찾기 위한 저장소)
-            ArrayDeque<Character> deque = new ArrayDeque<>();
+            ArrayDeque<Character> deque = new ArrayDeque<>();                       // 공간 복잡도 : O(N) (최악의 경우)
 
             // 한 쌍이 되는 문자열, 즉, 문자열이 유효한지를 확인하는 루프
             for(int j = i; j < i + n; j++) {                                        // O(N) // 회전된 문자열을 검사

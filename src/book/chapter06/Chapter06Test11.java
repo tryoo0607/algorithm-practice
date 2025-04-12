@@ -49,10 +49,11 @@ public class Chapter06Test11 extends CodingTest {
     // 개선된 코드
     /*
         시간 복잡도 : O(N)
+        공간 복잡도 : O(N)
     */
     private void createCase(String str) {
 
-        Stack<Character> stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();                 // 공간 복잡도 : O(N)
         for(Character c : str.toCharArray()) {                  // O(N)
             if(!stack.isEmpty() && stack.peek().equals(c)) {    // O(1)
                 stack.pop();                                    // O(1)

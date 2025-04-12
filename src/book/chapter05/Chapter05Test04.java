@@ -19,6 +19,7 @@ public class Chapter05Test04 extends CodingTest {
 
     /*
         시간 복잡도 : O(N)
+        공간 복잡도 : O(1) // 수포자 수가 고정된 경우, 아니면 O(K)
     */
     private void createCase(int[] answers) {
         int[][] patterns = {
@@ -27,7 +28,7 @@ public class Chapter05Test04 extends CodingTest {
                 {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}
         };
 
-        int[] scores = new int[patterns.length];
+        int[] scores = new int[patterns.length];                // 공간 복잡도  : O(1) // 수포자 수가 고정된 경우, 아니면 O(K)
 
         /*
         - answer 수는 N이라고 가정 (1~10000)

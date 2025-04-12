@@ -32,10 +32,11 @@ public class Chapter06Test09 extends CodingTest {
     // Stack 활용한 모범 답안
     /*
         시간복잡도 : O(log N)
+        공간 복잡도 : O(log N)
     */
     private void createCase(int decimal) {
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();       // 공간 복잡도 : O(log N) (시간 복잡도와 이유 동일)
 
         int div = decimal;
 
@@ -52,6 +53,7 @@ public class Chapter06Test09 extends CodingTest {
 
           - 따라서, 정확한 연산 횟수가 log₂(decimal)이어도
             빅오 표기에서는 O(log N)으로 표기하는 것이 일반적임
+
         */
         while(div > 0) {                            // log₂(decimal) => O(N)
             int remain = div % 2;                   // O(1)
@@ -60,7 +62,7 @@ public class Chapter06Test09 extends CodingTest {
             div /= 2;                               // O(1)
         }
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();     // O(log N)
 
         while(!stack.isEmpty()) {                   // O(log N)
             sb.append(stack.pop());                 // O(1)

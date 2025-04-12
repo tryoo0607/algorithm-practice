@@ -31,24 +31,23 @@ public class Chapter06Test12 extends CodingTest {
         - 이런 방식은 다음과 같은 문제에 유용함:
             - '뒤에 있는 더 작은 수', '앞에서부터 가격이 떨어지는 시점', '다음 큰 수 찾기' 등
 
-        - 단조 스택은 특정 조건을 만족하는 다음 위치(인덱스)를 빠르게 찾기 위한 스택 기반 기법이며,
-          그 자체로 암시적 단일 순회를 유도함 (O(N) 보장)
+        - 단조 스택은 특정 조건을 만족하는 다음 위치(인덱스)를 빠르게 찾기 위한 스택 기반 기법 (O(N) 보장)
     */
 
     /*
         시간 복잡도 : O(N)
+        공간 복잡도 : O(N)
     */
     // 단조 스택 패턴의 대표적 예시
     private void createCase(int[] prices) {
 
         int n = prices.length;
-        int[] results = new int[n];
+        int[] results = new int[n];             // 공간 복잡도 : O(N)
 
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();   // 공간 복잡도 : O(N) (최악의 경우 모든 인덱스가 들어감)
 
 
         /*
-            # 암시적 단일 순회
             - 겉보기 이중 반복이지만 실제 반복은 한 번뿐인 패턴
             - 코드 구조는 for + while 이중 루프처럼 보이지만
                 -> 실제로는 전체 원소를 한 번씩만 처리
@@ -61,8 +60,6 @@ public class Chapter06Test12 extends CodingTest {
             - 따라서 O(N)
 
             - 이 경우엔 O(N) * O(N)이 아닌 O(N) + O(N)
-
-            => 아래에서는 단조 스택 구조를 이용하여 이 암시적 단일 순회를 구현한 것
         */
         for(int i = 0; i < n; i++) {                                        // O(N)
 

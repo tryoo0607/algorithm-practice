@@ -19,9 +19,12 @@ public class Chapter05Test03 extends CodingTest {
 
     /*
         시간 복잡도 : O(N^2)
+        공간 복잡도 : O(N^2)
     */
     private void createCase(int[] numbers) {
-        HashSet<Integer> numberSet = new HashSet<>();
+        // HashSet은 최대 N^2개의 조합이 저장될 수 있으므로, 공간 복잡도는 O(N^2)
+        // 다만 실제 데이터에서는 중복되는 합이 있어 보통은 더 적게 저장됨
+        HashSet<Integer> numberSet = new HashSet<>();       // 공간 복잡도 : O(N^2)
 
         // O(N^2)
         for (int i = 0; i < numbers.length -1 ; i++) {
