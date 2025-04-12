@@ -26,9 +26,9 @@ public class Chapter06Test13 extends CodingTest {
     }
 
     /*
-    시간 복잡도 : O(N^2 + M)
-    공간 복잡도 : O(N^2 + M)
-*/
+        시간 복잡도 : O(N^2 + M)
+        공간 복잡도 : O(N^2 + M)
+    */
     private void createCase(int[][] board, int[] moves) {
 
         HashMap<Integer, Stack<Integer>> boardMap = new HashMap<>();  // 공간: O(N) (key 수 만큼)
