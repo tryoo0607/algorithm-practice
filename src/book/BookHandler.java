@@ -29,6 +29,7 @@ public class BookHandler extends CodingTestHandler {
 //        return new Chapter06Test10();       // 문제 10. 괄호 회전하기 *  // stack, deque 개념            => 복습 필수 (다시 풀어볼 것)
 //        return new Chapter06Test11();       // 문제 11. 짝지어 제거하기 *
 //        return new Chapter06Test12();       // 문제 12. 주식 가격 ** // 단조스택                         => 복습 필수 (다시 풀어볼 것)
-        return new Chapter06Test13();       // 문제 13. 크레인 인형 뽑기 게임 **
+//        return new Chapter06Test13();       // 문제 13. 크레인 인형 뽑기 게임 **
+        return new Chapter06Test14();       // 문제 14. 표 편집 *****
     }
 }
