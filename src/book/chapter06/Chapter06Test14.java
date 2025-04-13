@@ -74,13 +74,17 @@ public class Chapter06Test14 extends CodingTest {
         System.out.println("[작업 결과] : " + result);
     }
 
+    /*
+        시간 복잡도 : O(N)
+        공간 복잡도 : O(N)
+    */
     private void createCase(int n, int k, String[] cmd) {
-        int[] up = new int[n + 2];
-        int[] down = new int[n + 2];
+        int[] up = new int[n + 2];                  // 공간 복잡도 : O(N)
+        int[] down = new int[n + 2];                // 공간 복잡도 : O(N)
 
-        for(int i = 0; i < n + 2; i++) {
-            up[i] = i - 1;
-            down[i] = i + 1;
+        for(int i = 0; i < n + 2; i++) {            // O(N)
+            up[i] = i - 1;                          // O(1)
+            down[i] = i + 1;                        // O(1)
         }
 
         // 현재 up / down의 범위는 -1 ~ n + 1;
@@ -90,42 +94,42 @@ public class Chapter06Test14 extends CodingTest {
         k++;
 
         // 삭제 행
-        Stack<Integer> deletedRow = new Stack<>();
+        Stack<Integer> deletedRow = new Stack<>();      // 공간 복잡도 : O(M)
 
-        for(String commend : cmd) {
+        for(String commend : cmd) {                     // O(M)
             if (commend.equals("C")) {
                 // k = 현재 행 위치 -> 삭제
-                deletedRow.push(k);
+                deletedRow.push(k);                     // O(1)
 
                 // 실제 삭제하는 대신 상대적 위치를 조정
 
                 // 현재 행 삭제 시  -> 현재 행의 위(up[k])의 down값은 현재 행의 down 값이 됨 (한 행이 지워졌으므로)
-                down[up[k]] = down[k];
+                down[up[k]] = down[k];                  // O(1)
 
                 // 현재 행 삭제 시  -> 현재 행의 아래(down[k])의 up값은 현재 행의 up 값이 됨 (한 행이 지워졌으므로)
-                up[down[k]] = up[k];
+                up[down[k]] = up[k];                    // O(1)
 
                 // 현재 행을 삭제한 행 아래로 내림
                 // 이 때, 삭제한 행이 마지막행 보다 아래면 아래가 아닌 위로 올림
-                k = n < down[k] ? up[k] : down[k];
+                k = n < down[k] ? up[k] : down[k];      // O(1)
             } else if (commend.equals("Z")) {
-                int restoreIdx = deletedRow.pop();
+                int restoreIdx = deletedRow.pop();      // O(1)
 
                 // 직전 행만 복구함 -> 따라서 직전 행의 위, 아래에 해당되는 행의 up, down 값만 다시 복구하면 됨
 
                 // 복구 행의 위(up[restoreIdx)는 복구 행이 돌아왔으니 down 값이 다시 복구 행(restoreIdx)가 됨
-                down[up[restoreIdx]] = restoreIdx;
+                down[up[restoreIdx]] = restoreIdx;      // O(1)
 
                 // 복구 행의 아래(down[restoreIdx)는 복구 행이 돌아왔으니 up 값이 다시 복구 행(restoreIdx)가 됨
-                up[down[restoreIdx]] = restoreIdx;
+                up[down[restoreIdx]] = restoreIdx;      // O(1)
             } else {
-                String[] s = commend.split(" ");
+                String[] s = commend.split(" ");  // O(1) // 공간복잡도 : O(1)
                 int x = Integer.parseInt(s[1]);
                 String cmdStr = s[0];
 
                 // 이동하기 위해선 그 행의 위, 아래 값의 현재 index로 이동해야함
                 // 따라서 한번에 up[k + x] 형태로 이동할 수는 없고 up / down에서 하나씩 찾아가면서 이동해야함
-                for(int i=0; i < x; i++) {
+                for(int i=0; i < x; i++) {                      // 최대 : O(10000) => O(1) => 문제 조건에 모든 X의 합이 1,000,000을 넘지 않는다고 했음
                     k = cmdStr.equals("U") ? up[k] : down[k];
                 }
             }
@@ -134,13 +138,13 @@ public class Chapter06Test14 extends CodingTest {
         char[] arr = new char[n];
         Arrays.fill(arr, 'O');
 
-        for(Integer idx : deletedRow) {
+        for(Integer idx : deletedRow) {     // O(N) (최악의 경우)
             // 현재 deletedRow에 저장된 것은 행 + 1 (임시 공간 추가 반영한 수치);
             // + 1 된 값에 대한 제거가 필요함
             arr[idx - 1] = 'X';
         }
 
-        String result = new String(arr);
+        String result = new String(arr);            // 공간 복잡도 : O(N) (최악의 경우)
 
         System.out.println("[작업 이전] : ");
         System.out.println("n : " + n);
