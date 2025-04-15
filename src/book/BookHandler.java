@@ -37,6 +37,7 @@ public class BookHandler extends CodingTestHandler {
         /*
             Chapter 07
         */
-        return new Chapter07Test15();       // 문제 15. 요세푸스 문제 **
+//        return new Chapter07Test15();       // 문제 15. 요세푸스 문제 **
+        return new Chapter07Test16();       // 문제 16. 기능 개발 **
     }
 }
