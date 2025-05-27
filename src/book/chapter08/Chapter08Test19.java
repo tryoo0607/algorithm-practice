@@ -67,7 +67,7 @@ public class Chapter08Test19 extends CodingTest {
 
 
     /*
-        시간 복잡도 : O(N)
+        시간 복잡도 : O(N) + O(N) => O(N)
         공간 복잡도 : O(N)
     */
     private void createCase(HashMap<String, String[]> map) {
@@ -80,7 +80,7 @@ public class Chapter08Test19 extends CodingTest {
         int cap = (int) (expected / factor) + 1;
         HashMap<String, Integer> hashMap = new HashMap<>(cap, factor);          // 공간복잡도 : O(N)
 
-        for(String comp : completion) {                                         // O(N)
+        for(String comp : completion) {                                         // O(K) => O(N -1) => O(N)
             hashMap.put(comp, hashMap.getOrDefault(comp, 0) + 1);   // O(1)
         }
 
