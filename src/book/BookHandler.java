@@ -40,6 +40,7 @@ public class BookHandler extends CodingTestHandler {
         /*  Chapter 08  */
 //        return new Chapter08Test18();       // 문제 18. 두 개의 수로 특정 값 만들기 *
 //        return new Chapter08Test19();       // 문제 19. 완주하지 못한 선수 *
-        return new Chapter08Test20();       // 문제 20. 할인 행사 **
+//        return new Chapter08Test20();       // 문제 20. 할인 행사 **
+        return new Chapter08Test21();       // 문제 21. 오픈 채팅방 **
     }
 }
