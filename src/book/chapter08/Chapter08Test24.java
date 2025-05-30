@@ -24,5 +24,9 @@ public class Chapter08Test24 extends CodingTest {
 
     private void createCase(String[] order, int[] course) {
 
+
+        for(String str : order) {
+            
+        }
     }
 }

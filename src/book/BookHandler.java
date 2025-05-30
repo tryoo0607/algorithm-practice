@@ -44,6 +44,6 @@ public class BookHandler extends CodingTestHandler {
 //        return new Chapter08Test21();       // 문제 21. 오픈 채팅방 **
 //        return new Chapter08Test22();       // 문제 22. 베스트 앨범 ** // Stream 활용 방식                 => 복습 필수 (다시 풀어볼 것)
 //        return new Chapter08Test23();       // 문제 23. 신고 결과 받기 ** // 시간복잡도, 공간복잡도 주의하기
-        return new Chapter08Test24();       // 문제 24. 메뉴 리뉴얼 ***
+        return new Chapter08Test24();       // 문제 24. 메뉴 리뉴얼 ***    // 조합 관련                      => 복습 필수 (다시 풀어볼 것)
     }
 }
