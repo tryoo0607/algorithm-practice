@@ -14,7 +14,8 @@ public class LectureHandler extends CodingTestHandler {
     public CodingTest getTest() {
 
         /* Section 01 */
-        return new Section01Test01();       // 01. 문자 찾기
-
+//        return new Section01Test01();       // 01. 문자 찾기
+//        return new Section01Test02();       // 02. 대소문자 변환
+        return new Section01Test03();       // 03. 문장 속 단어
     }
 }
