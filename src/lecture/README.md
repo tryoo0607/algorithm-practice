@@ -9,6 +9,9 @@
   - boolean -> scanner.nextBoolean();
 - 정답만 System.out.println()으로 출력할 것
 - solution Method가 static이 아닌 경우 별도 인스턴스 생성할 것
+  - main 메소드는 정적 메소드(static method)
+  - 정적 메소드 내부에서는 인스턴스 메소드를 직접 호출할 수 없음
+  - 따라서 인스턴스를 생성해 주어야 함
 
 
 ```java
