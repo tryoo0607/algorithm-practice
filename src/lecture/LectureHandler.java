@@ -23,6 +23,8 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section01Test07();       // 07. 회문 문자열
 //        return new Section01Test08();       // 08. 유효한 팰린드롬
 //        return new Section01Test09();       // 9. 숫자만 추출
-        return new Section01Test10();       // 10. 가장 짧은 문자거리
+//        return new Section01Test10();       // 10. 가장 짧은 문자거리
+//        return new Section01Test11();       // 11. 문자열 압축
+        return new Section01Test12();       // 12. 암호
     }
 }
