@@ -100,7 +100,7 @@ public class Section01Test10 extends CodingTest {
 
         String result = Arrays.stream(indexes)
                 .mapToObj(String::valueOf)
-                .collect(Collectors.joining());
+                .collect(Collectors.joining(" "));
 
         System.out.println("[작업 이전] : ");
         System.out.println("[str] : " + str);
