@@ -3,6 +3,7 @@ package lecture;
 import common.CodingTest;
 import common.CodingTestHandler;
 import lecture.section01.*;
+import lecture.section02.*;
 
 /*
     인프런 강의 : 자바(Java) 알고리즘 문제풀이 입문: 코딩테스트 대비
@@ -25,6 +26,7 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section01Test09();       // 9. 숫자만 추출
 //        return new Section01Test10();       // 10. 가장 짧은 문자거리
 //        return new Section01Test11();       // 11. 문자열 압축
-        return new Section01Test12();       // 12. 암호
+//        return new Section01Test12();       // 12. 암호
+        return new Section02Test01();       // 01. 큰 수 출력하기
     }
 }
