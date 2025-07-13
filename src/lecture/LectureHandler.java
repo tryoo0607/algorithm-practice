@@ -27,6 +27,7 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section01Test10();       // 10. 가장 짧은 문자거리
 //        return new Section01Test11();       // 11. 문자열 압축
 //        return new Section01Test12();       // 12. 암호
-        return new Section02Test01();       // 01. 큰 수 출력하기
+//        return new Section02Test01();       // 01. 큰 수 출력하기
+        return new Section02Test02();       // 02. 보이는 학생
     }
 }
