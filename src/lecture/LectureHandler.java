@@ -28,6 +28,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section01Test11();       // 11. 문자열 압축
 //        return new Section01Test12();       // 12. 암호
 //        return new Section02Test01();       // 01. 큰 수 출력하기
-        return new Section02Test02();       // 02. 보이는 학생
+//        return new Section02Test02();       // 02. 보이는 학생
+//        return new Section02Test03();       // 03. 가위 바위 보
+//        return new Section02Test04();       // 04. 피보나치 수열
+        return new Section02Test05();       // 05. 소수(에라토스테네스 체)
     }
 }
