@@ -1,9 +1,9 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
 // 12.암호
-public class Section01Test12 extends CodingTest {
+public class Section02Test12 extends CodingTest {
 
     private final int NUM = 4;
     private final String STR = "#****###**#####**#####**##**";

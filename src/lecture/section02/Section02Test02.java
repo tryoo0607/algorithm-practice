@@ -2,35 +2,37 @@ package lecture.section02;
 
 import common.CodingTest;
 
-import java.util.Arrays;
-
-// 02. 보이는 학생
+// 02. 대소문자 변환
 public class Section02Test02 extends CodingTest {
 
-    private final int N = 8;
-    private final int[] NUM_ARR = {130, 135, 148, 140, 145, 150, 150, 153};
+    private final String STR = "StuDY";
 
     @Override
     public void addCases() {
-
-        testCases.add(() -> createCase(N, NUM_ARR));
+        testCases.add(() -> createCase(STR));
     }
 
-    private void createCase(int n, int[] numArr) {
+    /*
+        시간복잡도 : O(N)
+        공간복잡도 : O(1)
+    */
+    private void createCase(String str) {
 
-        int count = 1;
-        int max = numArr[0];
+        // StringBuilder -> 비동기 / StringBuffer -> 동기 (스레드 안전)
+        StringBuilder builder = new StringBuilder(str.length());    //  공간복잡도 : O(1)
 
-        for(int i=0; i < n; i++){
-            if(max < numArr[i]) {
-                max = numArr[i];
-                count++;
+        for(Character c : str.toCharArray()) {              // O(N)
+            if(Character.isUpperCase(c)) {
+                builder.append(Character.toLowerCase(c));
+            } else {
+                builder.append(Character.toUpperCase(c));
             }
         }
 
+        String result = builder.toString();
+
         System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
-        System.out.println("[numArr] : " + Arrays.toString(numArr));
-        System.out.println("[작업 결과] : " + count);
+        System.out.println("[str] : " + str);
+        System.out.println("[작업 결과] : " + result);
     }
 }

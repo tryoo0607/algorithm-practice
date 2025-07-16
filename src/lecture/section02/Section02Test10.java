@@ -1,4 +1,4 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 // 10. 가장 짧은 문자거리
-public class Section01Test10 extends CodingTest {
+public class Section02Test10 extends CodingTest {
 
     private final String STR = "teachermode e";
 

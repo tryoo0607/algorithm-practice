@@ -2,134 +2,70 @@ package lecture.section02;
 
 import common.CodingTest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
-// 05. 소수(에라토스테네스 체)
+// 05. 특정 문자 뒤집기
 public class Section02Test05 extends CodingTest {
 
-    private final int N = 20;
+    private final String STR = "S#T!EG*b@a";
 
     @Override
     public void addCases() {
 
-        testCases.add(() -> createCase(N));
-        testCases.add(() -> createCase2(N));
-
-        // 권장 방법
-        testCases.add(() -> createCase3(N));
+//        testCases.add(() -> createCase(STR));
+        testCases.add(() -> createCase2(STR));
     }
 
     /*
-        시간복잡도 : O(n² / log n)
-        공간복잡도 : O(n / log n)
+        시간복잡도 : O(N)
+        공간복잡도 : O(N)
     */
-    // 비효율적인 방법
-    private void createCase(int n) {
+    // 권장되지 않음 -> 양쪽이 알파벳일 때만 교환되어야 함
+    private void createCase(String str) {
 
-        ArrayList<Integer> primes = new ArrayList<>();
+        char[] arr = str.toCharArray();
 
-        for(int i=2; i <= n; i++) {
-            int count = 0;
-
-            int num = Math.min(i, 10);
-            for(int j=1; j < num; j++) {
-                if(i % j == 0) count++;
+        int last = (int) Math.floor((double) str.length() / 2);
+        for(int i=0; i < last; i++) {
+            if(Character.isAlphabetic(arr[i])) {
+                char tmp = arr[i];
+                arr[i] = arr[arr.length - 1 - i];
+                arr[arr.length - 1 - i] = tmp;
             }
-
-            if(i >= 10) {
-                for(int prime : primes) {
-                    if(i % prime == 0) count++;
-                }
-            }
-
-            count++;
-
-            if(count == 2) primes.add(i);
         }
 
-        int result = primes.size();
-
+        String result = new String(arr);
         System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
+        System.out.println("[str] : " + str);
         System.out.println("[작업 결과] : " + result);
     }
 
-    // 비효율적인 방법2 -> 권장되지 않음(자기 자신을 count하는 편법 썼기 때문)
-    private void createCase2(int n) {
-
-        ArrayList<Integer> primes = new ArrayList<>();
-
-        for(int i=2; i <= n; i++) {
-            int count = 0;
-
-            int num = Math.min(i, 10);
-            for(int j=1; j < num; j++) {
-                if(i % j == 0) count++;
-            }
-
-            if(i >= 10) {
-                for(int prime : primes) {
-                    if(i % prime == 0) count++;
-                }
-            }
-
-            count++;
-
-            if(count == 2) primes.add(i);
-        }
-
-        int result = primes.size();
-
-        System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
-        System.out.println("[작업 결과] : " + result);
-    }
 
     /*
-        시간복잡도 : O(n log log n)
-        공간복잡도 : O(n)
+        시간복잡도 : O(N)
+        공간복잡도 : O(N)
     */
-    // 에라토스테네스의 체 -> 권장 방법
-    private void createCase3(int n) {
+    // 투 포인터 방식 채용
+    // 투 포인터 -> 양쪽이 모두 알파벳일 경우만 교환하도록 만듦
+    private void createCase2(String str) {
+        char[] arr = str.toCharArray();
 
-        // 1 ~ n  -> n개
-        // 0 -> 1개
-        // 인덱스 == 숫자 처럼 쓰기 위해서 0도 추가하는 것
-        boolean[] isPrime = new boolean[n + 1];
+        int lt = 0;
+        int rt = arr.length -1;
 
-        // 2 ~ 9를 모두 소수라고 가정
-        Arrays.fill(isPrime, true);
-        isPrime[0] = false;
-        isPrime[1] = false;
-
-        // i < n 까지 돌아도 되지만 불필요한 루프 반복하게 되서 i * i 까지만
-        // 그 이후는 이미 작은 소수의 배수에서 다 지워지기 때문에 i * i < n을 만족할 때까지만 돌면 됨
-        for(int i=2; i * i <= n; i++) {
-            // 소수일 경우 -> 그 소수의 배수들을 모두 소수에서 제외함
-            if(isPrime[i]) {
-                /*
-                     i * 2 가 아닌 i * i 부터 거르는 이유
-                     => i * 2, i * 3, ... i * (i - 1) 까지는 이전 채에서 걸러졌기 때문
-                */
-                /*
-                    j += i 인 이유 => i의 배수들을 지우기 위해
-                    현재 j => i * i 부터 시작함
-                    즉, i * i, i * (i + 1), i * (i + 2) ... 이런 식으로 i의 배수들을 지우기 위함
-                */
-                for(int j = i * i; j <= n; j += i) {
-                    isPrime[j] = false;
-                }
+        while(lt < rt) {
+            if(!Character.isAlphabetic(arr[lt])) lt++;
+            else if (!Character.isAlphabetic(arr[rt])) rt--;
+            else {
+                char tmp = arr[lt];
+                arr[lt] = arr[rt];
+                arr[rt] = tmp;
+                lt++;
+                rt--;
             }
         }
 
-        int result = 0;
-        for(boolean isTrue: isPrime) {
-            if(isTrue) result++;
-        }
-
+        String result = new String(arr);
         System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
+        System.out.println("[str] : " + str);
         System.out.println("[작업 결과] : " + result);
     }
 }

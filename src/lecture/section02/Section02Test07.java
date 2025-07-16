@@ -1,9 +1,9 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
 // 07. 회문 문자열
-public class Section01Test07 extends CodingTest {
+public class Section02Test07 extends CodingTest {
 
     private final String STR = "gooG";
 

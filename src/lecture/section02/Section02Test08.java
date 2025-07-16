@@ -1,9 +1,9 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
 // 08. 유효한 팰린드롬
-public class Section01Test08 extends CodingTest {
+public class Section02Test08 extends CodingTest {
 
     private final String STR = "found7, time: study; Yduts; emit, 7Dnuof";
     @Override

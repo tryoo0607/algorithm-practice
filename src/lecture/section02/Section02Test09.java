@@ -1,11 +1,9 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
-import java.util.Arrays;
-
 // 9. 숫자만 추출
-public class Section01Test09 extends CodingTest {
+public class Section02Test09 extends CodingTest {
 
     private final String STR = "g0en2T0s8eSoft";
 

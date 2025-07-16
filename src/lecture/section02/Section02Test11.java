@@ -1,9 +1,9 @@
-package lecture.section01;
+package lecture.section02;
 
 import common.CodingTest;
 
 // 11. 문자열 압축
-public class Section01Test11 extends CodingTest {
+public class Section02Test11 extends CodingTest {
 
     private final String STR1 = "KKHSSSSSSSE";
     private final String STR2 = "KSTTTSEEKFKKKDJJGG";

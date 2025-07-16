@@ -2,110 +2,78 @@ package lecture.section02;
 
 import common.CodingTest;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
-// 06. 뒤집은 소수
+// 06. 중복문자제거
 public class Section02Test06 extends CodingTest {
 
-    private final int N = 9;
-    private final int[] NUM_ARR = {32, 55, 62, 20, 250, 370, 200, 30, 100};
+    private final String STR = "ksekkset";
 
     @Override
     public void addCases() {
-
-        testCases.add(() -> createCase(N, NUM_ARR));
-        testCases.add(() -> createCase2(N, NUM_ARR));
+        testCases.add(() -> createCase(STR));
+        testCases.add(() -> createCase2(STR));
+        testCases.add(() -> createCase3(STR));
     }
 
-
     /*
-        시간복잡도 : O(n log log n)
-        공간복잡도 : O(n)
+        시간복잡도 : O(N)
+        공간복잡도 : O(N)
     */
-    private void createCase(int n, int[] numArr) {
+    private void createCase(String str) {
 
-        int[] reversedArr = new int[n];
-        for(int i=0; i < n; i++) {
-            String numStr = String.valueOf(numArr[i]);
-            StringBuilder builder = new StringBuilder(numStr).reverse();
-            reversedArr[i] = Integer.parseInt(builder.toString());
-        }
-
-        int max = Arrays.stream(reversedArr).max().getAsInt();
-
-        boolean[] isPrime = new boolean[max + 1];
-
-        Arrays.fill(isPrime, true);
-        isPrime[0] = false;
-        isPrime[1] = false;
-
-        for(int i=2; i * i <= max; i++) {
-            if(isPrime[i]) {
-
-                for(int j = i * i; j <= max; j += i) {
-                    isPrime[j] = false;
-                }
-            }
-        }
-
-        ArrayList<Integer> primeArr = new ArrayList<>();
-
-        for(int reversedNum : reversedArr) {
-            if(isPrime[reversedNum]) {
-                primeArr.add(reversedNum);
-            }
-        }
-
-        String result = primeArr.stream()
-                        .map(String::valueOf)
-                        .collect(Collectors.joining(" "));
+        // 공간복잡도 : O(N) (문자열 길이)
+        String result = Arrays.stream(str.split(""))        // O(1)
+                .distinct()                                       // O(N)
+                .collect(Collectors.joining());                   // O(N)
 
         System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
+        System.out.println("[str] : " + str);
         System.out.println("[작업 결과] : " + result);
     }
 
     /*
-        시간복잡도 : O(n log log n)
-        공간복잡도 : O(n)
+        시간복잡도 : O(N)
+        공간복잡도 : O(N)
     */
-    // StringBuilder를 사용하지 않고 뒤집는 방법
-    private void createCase2(int n, int[] numArr) {
+    // HashSet 이용한 방식
+    private void createCase2(String str) {
+        StringBuilder sb = new StringBuilder();     // 공간복잡도 : O(N)
+        Set<Character> seen = new HashSet<>();      // 공간복잡도 : O(N)
 
-        ArrayList<Integer> primeArr = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-            int reversed = reverse(numArr[i]);
-            if (isPrime(reversed)) {
-                primeArr.add(reversed);
+        for (char c : str.toCharArray()) {          // O(1)
+            if (!seen.contains(c)) {                // contains: O(1) (평균)
+                seen.add(c);                        // add: O(1) (평균)
+                sb.append(c);                       // append: O(1)
             }
         }
 
-        String result = primeArr.stream()
-                .map(String::valueOf)
-                .collect(Collectors.joining(" "));
+        System.out.println("[작업 이전] : ");
+        System.out.println("[str] : " + str);
+        System.out.println("[작업 결과] : " + sb.toString());
+    }
+
+    /*
+        시간복잡도 : O(N^2)
+        공간복잡도 : O(N)
+    */
+    // indexOf 활용
+    private void createCase3(String str) {
+
+        StringBuilder builder = new StringBuilder();    // 공간복잡도 : O(N)
+
+        // O(N^2)
+        for(String a : str.split("")) {           // O(N)
+            if(builder.indexOf(a) < 0) {                // O(N)
+                builder.append(a);
+            }
+        }
 
         System.out.println("[작업 이전] : ");
-        System.out.println("[n] : " + n);
-        System.out.println("[작업 결과] : " + result);
-    }
-
-    private int reverse(int num) {
-        int res = 0;
-        while (num > 0) {
-            res = res * 10 + num % 10;
-            num /= 10;
-        }
-        return res;
-    }
-
-    private boolean isPrime(int num) {
-        if (num < 2) return false;
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) return false;
-        }
-        return true;
+        System.out.println("[str] : " + str);
+        System.out.println("[작업 결과] : " + builder.toString());
     }
 }
