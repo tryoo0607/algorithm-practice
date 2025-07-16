@@ -22,7 +22,7 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section02Test02();       // 02. 대소문자 변환
 //        return new Section02Test03();       // 03. 문장 속 단어
 //        return new Section02Test04();       // 04. 단어 뒤집기
-//        return new Section02Test05();       // 05. 특정 문자 뒤집기
+//        return new Section02Test05();       // 05. 특정 문자 뒤집기                  // 투 포인터 방식
 //        return new Section02Test06();       // 06. 중복문자제거
 //        return new Section02Test07();       // 07. 회문 문자열
 //        return new Section02Test08();       // 08. 유효한 팰린드롬
@@ -36,10 +36,11 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section03Test02();       // 02. 보이는 학생
 //        return new Section03Test03();       // 03. 가위 바위 보
 //        return new Section03Test04();       // 04. 피보나치 수열
-//        return new Section03Test05();       // 05. 소수(에라토스테네스 체)
+//        return new Section03Test05();       // 05. 소수(에라토스테네스 체)          // 에라토스테네스 체
 //        return new Section03Test06();       // 06. 뒤집은 소수
-        return new Section03Test07();       // 07. 점수 계산
-
+//        return new Section03Test07();       // 07. 점수 계산
+//        return new Section03Test08();       // 08. 등수구하기                        // 브루투포스 알고리즘
+        return new Section03Test09();       // 09. 격자판 최대합
 
         /* Section 04 */
 
