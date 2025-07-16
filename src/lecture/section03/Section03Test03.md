@@ -7,7 +7,7 @@ A, B 두 사람이 가위바위보 게임을 합니다. 총 N번의 게임을 �
 
 예를 들어 N=5이면
 
-![img.png](img.png)Image1.jpg
+![img.png](Section03Test03_img.png)Image1.jpg
 
 두 사람의 각 회의 가위, 바위, 보 정보가 주어지면 각 회를 누가 이겼는지 출력하는 프로그램을 작성하세요.
 
