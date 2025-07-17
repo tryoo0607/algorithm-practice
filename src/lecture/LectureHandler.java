@@ -40,8 +40,8 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section03Test06();       // 06. 뒤집은 소수
 //        return new Section03Test07();       // 07. 점수 계산
 //        return new Section03Test08();       // 08. 등수구하기                        // 브루투포스 알고리즘
-        return new Section03Test09();       // 09. 격자판 최대합
-
+//        return new Section03Test09();       // 09. 격자판 최대합
+        return new Section03Test10();       // 10. 봉우리
         /* Section 04 */
 
         /* Section 05 */
