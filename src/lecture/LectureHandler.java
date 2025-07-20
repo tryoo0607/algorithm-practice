@@ -4,6 +4,7 @@ import common.CodingTest;
 import common.CodingTestHandler;
 import lecture.section02.*;
 import lecture.section03.*;
+import lecture.section04.*;
 
 /*
     인프런 강의 : 자바(Java) 알고리즘 문제풀이 입문: 코딩테스트 대비
@@ -39,13 +40,14 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section03Test05();       // 05. 소수(에라토스테네스 체)          // 에라토스테네스 체
 //        return new Section03Test06();       // 06. 뒤집은 소수
 //        return new Section03Test07();       // 07. 점수 계산
-//        return new Section03Test08();       // 08. 등수구하기                        // 브루투포스 알고리즘
+//        return new Section03Test08();       // 08. 등수구하기                     // 브루투포스 알고리즘
 //        return new Section03Test09();       // 09. 격자판 최대합
 //        return new Section03Test10();       // 10. 봉우리
 //        return new Section03Test11();       // 11.임시반장 정하기
-        return new Section03Test12();       // 12. 멘토링
+//        return new Section03Test12();       // 12. 멘토링
 
         /* Section 04 */
+        return new Section04Test01();       // 01.
 
         /* Section 05 */
 
