@@ -57,7 +57,7 @@ public class Section04Test03 extends CodingTest {
             sum += sales[i];
         }
 
-        int max = 0;
+        int max = sum;
 
         // 슬라이딩 윈도우
         // 처음 sum에서 앞 요소를 뺴고 뒷 요소 추가하는 식으로 sliding
