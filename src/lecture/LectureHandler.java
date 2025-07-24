@@ -50,8 +50,8 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section04Test01();       // 01. 두 배열 합치기                   // while 활용
 //        return new Section04Test02();       // 02. 공통 원소 구하기
 //        return new Section04Test03();       // 03. 최대 매출                        // 슬라이딩 윈도우 기법
-        return new Section04Test04();       // 04.연속부분수열(복합적문제)
-
+//        return new Section04Test04();       // 04.연속부분수열(복합적문제)
+        return new Section04Test05();       // 05. 연속된 자연수의 합
         /* Section 05 */
 
         /* Section 06 */
