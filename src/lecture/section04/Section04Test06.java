@@ -57,6 +57,10 @@ public class Section04Test06 extends CodingTest {
         System.out.println("[작업 결과] : " + result);
     }
 
+    /*
+        시간복잡도 : O(N)
+        공간복잡도 : O(1)
+    */
     // 권장 풀이
     private void createCase2(int n, int k, int[] arr) {
 
