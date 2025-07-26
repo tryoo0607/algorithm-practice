@@ -5,6 +5,7 @@ import common.CodingTestHandler;
 import lecture.section02.*;
 import lecture.section03.*;
 import lecture.section04.*;
+import lecture.section05.*;
 
 /*
     인프런 강의 : 자바(Java) 알고리즘 문제풀이 입문: 코딩테스트 대비
@@ -52,8 +53,10 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section04Test03();       // 03. 최대 매출                        // 슬라이딩 윈도우 기법
 //        return new Section04Test04();       // 04.연속부분수열(복합적문제)
 //        return new Section04Test05();       // 05. 연속된 자연수의 합
-        return new Section04Test06();       // 06. 최대 길이 연속부분수열
+//        return new Section04Test06();       // 06. 최대 길이 연속부분수열
+
         /* Section 05 */
+        return new Section05Test01();       // 01. 학급 회장(해쉬)
 
         /* Section 06 */
 
