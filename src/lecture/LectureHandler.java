@@ -56,7 +56,8 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section04Test06();       // 06. 최대 길이 연속부분수열
 
         /* Section 05 */
-        return new Section05Test01();       // 01. 학급 회장(해쉬)
+//        return new Section05Test01();       // 01. 학급 회장(해쉬)
+        return new Section05Test02();       // 02. 아나그램(해쉬)
 
         /* Section 06 */
 
