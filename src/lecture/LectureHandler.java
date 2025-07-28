@@ -57,7 +57,9 @@ public class LectureHandler extends CodingTestHandler {
 
         /* Section 05 */
 //        return new Section05Test01();       // 01. 학급 회장(해쉬)
-        return new Section05Test02();       // 02. 아나그램(해쉬)
+//        return new Section05Test02();       // 02. 아나그램(해쉬)
+//        return new Section05Test03();       // 03. 매출액의 종류
+        return new Section05Test04();       // 04. 모든 아나그램 찾기
 
         /* Section 06 */
 
