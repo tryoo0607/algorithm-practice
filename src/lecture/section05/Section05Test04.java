@@ -121,7 +121,7 @@ public class Section05Test04 extends CodingTest {
 
         int result = 0;
 
-        for(int i=0; i < s.length() - t.length(); i++) {
+        for(int i=0; i <= s.length() - t.length(); i++) {
             String sub = s.substring(i, i + t.length());
 
             HashMap<Character, Integer> mapS = new HashMap<>();
