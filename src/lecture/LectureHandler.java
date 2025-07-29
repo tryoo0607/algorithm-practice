@@ -6,6 +6,7 @@ import lecture.section02.*;
 import lecture.section03.*;
 import lecture.section04.*;
 import lecture.section05.*;
+import lecture.section06.*;
 
 /*
     인프런 강의 : 자바(Java) 알고리즘 문제풀이 입문: 코딩테스트 대비
@@ -59,9 +60,11 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section05Test01();       // 01. 학급 회장(해쉬)
 //        return new Section05Test02();       // 02. 아나그램(해쉬)
 //        return new Section05Test03();       // 03. 매출액의 종류
-        return new Section05Test04();       // 04. 모든 아나그램 찾기
+//        return new Section05Test04();       // 04. 모든 아나그램 찾기
+//        return new Section05Test05();       // 05. K번째 큰 수
 
         /* Section 06 */
+        return new Section06Test01();       // 01. 올바른 괄호
 
         /* Section 07 */
 
