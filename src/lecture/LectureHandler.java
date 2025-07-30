@@ -64,7 +64,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section05Test05();       // 05. K번째 큰 수
 
         /* Section 06 */
-        return new Section06Test01();       // 01. 올바른 괄호
+//        return new Section06Test01();       // 01. 올바른 괄호
+//        return new Section06Test02();       // 02. 괄호 문자 제거
+        return new Section06Test03();       // 03. 크레인 인형뽑기(카카오)
 
         /* Section 07 */
 
