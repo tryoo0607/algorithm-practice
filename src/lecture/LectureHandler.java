@@ -68,8 +68,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section06Test02();       // 02. 괄호 문자 제거
 //        return new Section06Test03();       // 03. 크레인 인형뽑기(카카오)
 //        return new Section06Test04();       // 04. 후위식 연산(postfix)
-        return new Section06Test05();       // 05. 쇠막대기
-
+//        return new Section06Test05();       // 05. 쇠막대기
+//        return new Section06Test06();       // 06. 공주구하기
+        return new Section06Test07();       // 07. 교육과정 설계
 
 
         /* Section 07 */
