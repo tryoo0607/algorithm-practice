@@ -24,7 +24,7 @@ public class Section07Test01 extends CodingTest {
 
     /*
         시간복잡도 : O(N^2)
-        공간복잡도 : O(N)
+        공간복잡도 : O(1)
     */
     private void createCase(int n, int[] arr) {
 
