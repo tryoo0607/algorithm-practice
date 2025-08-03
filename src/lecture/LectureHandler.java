@@ -75,7 +75,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section06Test08();       // 08. 응급실
 
         /* Section 07 */
-        return new Section07Test01();       // 01. 선택정렬
+//        return new Section07Test01();       // 01. 선택정렬
+//        return new Section07Test02();       // 02. 버블정렬
+        return new Section07Test03();       // 03. 삽입정렬
 
         /* Section 08 */
 
