@@ -77,7 +77,9 @@ public class LectureHandler extends CodingTestHandler {
         /* Section 07 */
 //        return new Section07Test01();       // 01. 선택정렬
 //        return new Section07Test02();       // 02. 버블정렬
-        return new Section07Test03();       // 03. 삽입정렬
+//        return new Section07Test03();       // 03. 삽입정렬
+//        return new Section07Test04();       // 04. LRU(캐시, 카카오 변형)
+        return new Section07Test05();       // 05. 중복확인
 
         /* Section 08 */
 
