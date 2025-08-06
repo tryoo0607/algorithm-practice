@@ -81,7 +81,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section07Test04();       // 04. LRU(캐시, 카카오 변형)
 //        return new Section07Test05();       // 05. 중복확인
 //        return new Section07Test06();       // 06. 장난꾸러기
-        return new Section07Test07();       // 07. 좌표 정렬(compareTo)
+//        return new Section07Test07();       // 07. 좌표 정렬(compareTo)
+//        return new Section07Test08();       // 08. 이분검색
+        return new Section07Test09();       // 09. 뮤직비디오(결정알고리즘)            => 반드시 다시 풀어볼 것
 
         /* Section 08 */
 
