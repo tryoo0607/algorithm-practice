@@ -8,6 +8,7 @@ import lecture.section04.*;
 import lecture.section05.*;
 import lecture.section06.*;
 import lecture.section07.*;
+import lecture.section08.*;
 
 /*
     인프런 강의 : 자바(Java) 알고리즘 문제풀이 입문: 코딩테스트 대비
@@ -83,9 +84,11 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section07Test06();       // 06. 장난꾸러기
 //        return new Section07Test07();       // 07. 좌표 정렬(compareTo)
 //        return new Section07Test08();       // 08. 이분검색
-        return new Section07Test09();       // 09. 뮤직비디오(결정알고리즘)            => 반드시 다시 풀어볼 것
+//        return new Section07Test09();       // 09. 뮤직비디오(결정알고리즘)            => 반드시 다시 풀어볼 것
+//        return new Section07Test10();       // 10. 마구간 정의하기(결정알고리즘)         => 위와 살짝 다른 유형이니 다시 풀어보기
 
         /* Section 08 */
+        return new Section08Test01();       // 01. 재귀함수(스택프레임)
 
         /* Section 09 */
 
