@@ -88,7 +88,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section07Test10();       // 10. 마구간 정의하기(결정알고리즘)         => 위와 살짝 다른 유형이니 다시 풀어보기
 
         /* Section 08 */
-        return new Section08Test01();       // 01. 재귀함수(스택프레임)
+//        return new Section08Test01();       // 01. 재귀함수(스택프레임)
+//        return new Section08Test02();       // 02. 이진수 출력(재귀)
+        return new Section08Test03();       // 03. 팩토리얼
 
         /* Section 09 */
 
