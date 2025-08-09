@@ -90,7 +90,10 @@ public class LectureHandler extends CodingTestHandler {
         /* Section 08 */
 //        return new Section08Test01();       // 01. 재귀함수(스택프레임)
 //        return new Section08Test02();       // 02. 이진수 출력(재귀)
-        return new Section08Test03();       // 03. 팩토리얼
+//        return new Section08Test03();       // 03. 팩토리얼
+//        return new Section08Test04();       // 04. 피보나치 재귀(메모이제이션)
+//        return new Section08Test05();       // 05. 이진트리순회(DFS : Depth-First Search)
+        return new Section08Test05_Solution();
 
         /* Section 09 */
 
