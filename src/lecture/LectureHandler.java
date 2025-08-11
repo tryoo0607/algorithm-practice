@@ -94,7 +94,10 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section08Test04();       // 04. 피보나치 재귀(메모이제이션)
 //        return new Section08Test05();       // 05. 이진트리순회(DFS : Depth-First Search)
 //        return new Section08Test05_Solution();
-        return new Section08Test06();       // 06. 부분집합 구하기(DFS)                => 반드시 다시 풀어볼 것
+//        return new Section08Test06();       // 06. 부분집합 구하기(DFS)                => 반드시 다시 풀어볼 것
+//        return new Section08Test07();       // 07. 이진트리 레벨탐색(BFS: Breadth-First Search)
+//        return new Section08Test08();       // 08. 송아지 찾기 1(BFS : 상태 트리 탐색)
+        return new Section08Test08_Solution();       // => 반드시 다시 풀어보기
 
         /* Section 09 */
 
