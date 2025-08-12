@@ -2,12 +2,6 @@ package lecture;
 
 import common.CodingTest;
 import common.CodingTestHandler;
-import lecture.section02.*;
-import lecture.section03.*;
-import lecture.section04.*;
-import lecture.section05.*;
-import lecture.section06.*;
-import lecture.section07.*;
 import lecture.section08.*;
 
 /*
@@ -97,7 +91,9 @@ public class LectureHandler extends CodingTestHandler {
 //        return new Section08Test06();       // 06. 부분집합 구하기(DFS)                => 반드시 다시 풀어볼 것
 //        return new Section08Test07();       // 07. 이진트리 레벨탐색(BFS: Breadth-First Search)
 //        return new Section08Test08();       // 08. 송아지 찾기 1(BFS : 상태 트리 탐색)
-        return new Section08Test08_Solution();       // => 반드시 다시 풀어보기
+//        return new Section08Test08_Solution();       // => 반드시 다시 풀어보기
+//        return new Section08Test09();       // 09. Tree 말단 노드까지의 가장 짧은 경로 (DFS)
+        return new Section08Test10();       // 10. Tree 말단 노드까지의 가장 짧은 경로 (BFS)
 
         /* Section 09 */
 
